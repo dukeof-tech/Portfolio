@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duke · Product Designer &amp; Front-end Developer</title>
+  <meta name="description" content="Duke (Adeyemi Dennis Adeyinka) is a Lagos-based product designer and front-end developer who designs and builds websites, web apps and mobile apps people enjoy using.">
+  <meta property="og:title" content="Duke · Product Designer &amp; Front-end Developer">
+  <meta property="og:description" content="I help founders and teams building things that matter turn ideas into products people actually enjoy using.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ===== Floating nav ===== -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="#top" aria-label="Duke, back to top">Duke<span class="logo-dot"></span></a>
+      <ul class="nav-links">
+        <li><a href="#work"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Work</span></a></li>
+        <li><a href="#about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.5 4.5 0 0 0 7 0M9 9.5h.01M15 9.5h.01"/></svg><span>About</span></a></li>
+        <li><a href="#services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg><span>Services</span></a></li>
+        <li><a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Contact</span></a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-dark btn-sm" href="assets/Adeyemi-Dennis-CV.pdf" download>CV</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero container" id="top">
+      <div class="badges reveal">
+        <span class="badge badge-green"><span class="pulse"></span>Available for new projects</span>
+        <span class="badge">Lagos, Nigeria · Remote-friendly</span>
+      </div>
+
+      <h1 class="reveal">
+        Hi, I'm
+        <span class="avatar avatar-inline">
+          <span aria-hidden="true">D</span>
+          <img src="assets/avatar.jpg" alt="" onerror="this.remove()">
+        </span>
+        Duke.<br>
+        Product Designer <span class="muted">&amp;</span> <span class="accent">Front-end Developer</span>
+      </h1>
+
+      <p class="lead reveal">I help founders and teams building things that matter turn ideas into products people actually enjoy using: designed with care, built with code.</p>
+
+      <div class="actions reveal">
+        <a class="btn btn-dark" href="#contact">Start a project
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-light" href="#work">View my work</a>
+      </div>
+    </section>
+
+    <!-- ===== Design <-> Code ===== -->
+    <section class="container section" aria-labelledby="dc-title">
+      <div class="card dc reveal">
+        <div class="dc-head">
+          <div>
+            <p class="eyebrow">// how I work</p>
+            <h2 id="dc-title">I speak design <span class="muted">and</span> code.</h2>
+            <p class="muted">I started out as a front-end developer, fell in love with design, and kept both. Flip the switch.</p>
+          </div>
+          <div class="switch" role="group" aria-label="Show design or code">
+            <button type="button" class="is-on" data-view="design" aria-pressed="true">Design</button>
+            <button type="button" data-view="code" aria-pressed="false">Code</button>
+            <span class="switch-thumb" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="dc-stage" data-view="design">
+          <!-- Design view -->
+          <div class="dc-pane dc-design" aria-hidden="false">
+            <div class="frame-label">Card / Balance</div>
+            <div class="selection">
+              <span class="handle tl"></span><span class="handle tr"></span><span class="handle bl"></span><span class="handle br"></span>
+              <div class="mini-card">
+                <p class="mc-label">Total balance</p>
+                <p class="mc-amount">₦248,500.00</p>
+                <span class="mc-change">+12.4% this month</span>
+                <span class="mc-btn">Add money</span>
+              </div>
+              <span class="spec spec-pad">24</span>
+              <span class="spec spec-w">320</span>
+            </div>
+          </div>
+
+          <!-- Code view -->
+          <pre class="dc-pane dc-code" aria-hidden="true"><code><span class="k">export function</span> <span class="f">BalanceCard</span>({ balance, change }) {
+  <span class="k">return</span> (
+    &lt;<span class="t">div</span> <span class="a">className</span>=<span class="s">"rounded-3xl bg-white p-6 shadow-sm"</span>&gt;
+      &lt;<span class="t">p</span> <span class="a">className</span>=<span class="s">"text-sm text-gray-500"</span>&gt;Total balance&lt;/<span class="t">p</span>&gt;
+      &lt;<span class="t">h3</span> <span class="a">className</span>=<span class="s">"text-3xl font-semibold"</span>&gt;{balance}&lt;/<span class="t">h3</span>&gt;
+      &lt;<span class="t">span</span> <span class="a">className</span>=<span class="s">"text-green-600"</span>&gt;+{change}% this month&lt;/<span class="t">span</span>&gt;
+      &lt;<span class="t">button</span> <span class="a">className</span>=<span class="s">"mt-6 rounded-full bg-blue-600 px-5 py-3 text-white"</span>&gt;
+        Add money
+      &lt;/<span class="t">button</span>&gt;
+    &lt;/<span class="t">div</span>&gt;
+  );
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Work ===== -->
+    <section class="container section" id="work" aria-labelledby="work-title">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="work-title">Ideas, made usable.</h2>
+      </div>
+
+      <a class="card project project-featured reveal" href="crost-flow.html">
+        <div class="project-media">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_webp/461baa229783331.686b7e3b7e243.jpeg" alt="Crost Flow website on a laptop, with the mobile app on a phone in front" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-meta">Fintech · Mobile app + Website · Concept</p>
+          <h3>Crost Flow</h3>
+          <p class="muted">A credit card experience designed for young Nigerians and freelancers: simple onboarding, clear spending insights, and rewards that fit everyday life.</p>
+          <ul class="tags" aria-label="Project tags">
+            <li>Product design</li><li>UI/UX</li><li>Research</li><li>Light + dark</li>
+          </ul>
+          <span class="link-arrow">Read the case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <div class="grid-2">
+        <div class="card project-soon reveal">
+          <p class="project-meta">Personal project · In progress</p>
+          <h3>Something new is on the way</h3>
+          <p class="muted">Designing and building it end to end. Coming soon.</p>
+          <span class="typing" aria-hidden="true">building<span class="caret"></span></span>
+        </div>
+        <div class="card project-soon reveal">
+          <p class="project-meta">Personal project · In progress</p>
+          <h3>Another one, almost ready</h3>
+          <p class="muted">From first sketch to working product. Check back soon.</p>
+          <span class="typing" aria-hidden="true">designing<span class="caret"></span></span>
+        </div>
+      </div>
+
+      <div class="card nda reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <p>Much of my client work is under NDA, so it isn't shown here. I'm happy to talk through my experience and process on a call.</p>
+        <a class="link-arrow" href="#contact">Book a call <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="container section" id="about" aria-labelledby="about-title">
+      <div class="section-head reveal">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">From code, to design, to both.</h2>
+      </div>
+
+      <div class="about reveal">
+        <div class="photo-stack">
+          <!-- Second photo sits behind the first; hidden automatically if assets/photo-2.jpg is missing -->
+          <div class="about-photo card frame-back">
+            <span class="photo-clip"><img src="assets/photo-2.jpg" alt="Duke seated on a clear chair" loading="lazy" onerror="this.closest('.frame-back').remove()"></span>
+          </div>
+          <div class="about-photo card frame-front">
+          <span class="avatar avatar-large">
+            <span aria-hidden="true">D</span>
+            <img src="assets/photo.jpg" alt="Portrait of Duke (Adeyemi Dennis Adeyinka)" onerror="if (!this.dataset.fb) { this.dataset.fb = 1; this.src = 'assets/avatar.jpg'; } else { this.remove(); }">
+          </span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>I started out writing code. At a tech academy I learned front-end web development, and I could make things work. But I kept noticing that my projects didn't look or feel as thoughtful as the products I admired.</p>
+          <p>That gap led me to product design, and I fell in love with it. I taught myself UI/UX through YouTube, online courses and a lot of practice, and I've spent the last 3+ years designing websites, web apps and mobile apps for companies and founders.</p>
+          <p>Because I came from code, I design with the build in mind: interfaces that are clear for users, realistic for developers, and ready to ship. When it helps, I build the front-end too.</p>
+          <p>I'm especially drawn to products that make people's lives genuinely better. I'm open to freelance projects and full-time roles, remote or in Lagos.</p>
+          <p class="sig">Adeyemi Dennis Adeyinka <span class="muted">· Duke</span></p>
+        </div>
+      </div>
+
+      <div class="bento">
+        <div class="card bento-item reveal">
+          <p class="big-num">3<span class="accent">+</span></p>
+          <p class="muted">years designing products</p>
+        </div>
+        <div class="card bento-item bento-map reveal">
+          <svg class="map" viewBox="0 0 200 120" aria-hidden="true">
+            <path d="M0 30 Q60 20 100 45 T200 40M0 80 Q50 70 90 90 T200 85M40 0 Q50 60 30 120M120 0 Q110 50 140 120M170 0 L160 120"/>
+            <path class="water" d="M0 100 Q50 92 100 104 T200 98 V120 H0z"/>
+          </svg>
+          <span class="pin" aria-hidden="true"></span>
+          <div class="map-text">
+            <p><strong>Lagos, Nigeria</strong></p>
+            <p class="muted mono"><span id="lagos-time">--:--</span> WAT</p>
+          </div>
+        </div>
+        <div class="card bento-item reveal">
+          <p class="eyebrow">Currently</p>
+          <p><strong>Building 2 personal projects</strong></p>
+          <div class="progress" aria-hidden="true"><span style="--p:80%"></span></div>
+          <div class="progress" aria-hidden="true"><span style="--p:65%"></span></div>
+        </div>
+        <div class="card bento-item reveal">
+          <p class="eyebrow">Open to</p>
+          <p><strong>Freelance projects</strong></p>
+          <p><strong>Full-time roles</strong></p>
+          <p class="muted">Remote or Lagos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills playground ===== -->
+    <section class="container section" aria-labelledby="skills-title">
+      <div class="card playground reveal">
+        <div class="playground-head">
+          <p class="eyebrow">Toolbox</p>
+          <h2 id="skills-title">What I bring to your product</h2>
+          <p class="muted hint">psst, you can drag these around</p>
+        </div>
+        <ul class="pills" aria-label="Skills and tools">
+          <li class="pill pill-blue">Product design</li>
+          <li class="pill">Figma</li>
+          <li class="pill">UI/UX</li>
+          <li class="pill pill-dark">React</li>
+          <li class="pill">User flows</li>
+          <li class="pill">Prototyping</li>
+          <li class="pill pill-blue">User testing</li>
+          <li class="pill">Expo</li>
+          <li class="pill">Tailwind CSS</li>
+          <li class="pill pill-dark">JavaScript</li>
+          <li class="pill">HTML/CSS</li>
+          <li class="pill">Spline 3D</li>
+          <li class="pill pill-blue">Wireframing</li>
+          <li class="pill">Jitter</li>
+          <li class="pill">Photoshop</li>
+          <li class="pill">Illustrator</li>
+          <li class="pill pill-dark">Notion</li>
+          <li class="pill">Dev handoff</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="container section" id="services" aria-labelledby="services-title">
+      <div class="section-head reveal">
+        <p class="eyebrow">Services</p>
+        <h2 id="services-title">How I can help</h2>
+      </div>
+
+      <div class="grid-2">
+        <article class="card service reveal">
+          <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+          <h3>Mobile app UI/UX design</h3>
+          <p class="muted">User flows, wireframes and polished, ready-to-build screens for iOS and Android.</p>
+        </article>
+        <article class="card service reveal">
+          <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="M2 9h20M6 6.5h.01M9 6.5h.01"/></svg></span>
+          <h3>Website &amp; landing page design</h3>
+          <p class="muted">Clear, conversion-focused pages that explain your product and get people to act.</p>
+        </article>
+        <article class="card service reveal">
+          <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span>
+          <h3>Design + front-end build</h3>
+          <p class="muted">I design it, then build it in React, so there's one person from idea to working product.</p>
+        </article>
+        <article class="card service reveal">
+          <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5"/></svg></span>
+          <h3>Product redesign</h3>
+          <p class="muted">I find what's confusing or outdated, test it with users, and redesign it to be simpler and more effective.</p>
+        </article>
+      </div>
+
+      <div class="card process reveal">
+        <h3>How we'll work</h3>
+        <ol>
+          <li><span class="mono">01</span><strong>Discovery call</strong><span class="muted">Your goals, users and timeline.</span></li>
+          <li><span class="mono">02</span><strong>Proposal &amp; quote</strong><span class="muted">A clear scope and price.</span></li>
+          <li><span class="mono">03</span><strong>Design &amp; feedback</strong><span class="muted">Regular check-ins, no surprises.</span></li>
+          <li><span class="mono">04</span><strong>Handover or build</strong><span class="muted">Dev-ready files, or I build the front-end.</span></li>
+        </ol>
+        <a class="btn btn-dark" href="#contact">Get a quote</a>
+      </div>
+    </section>
+
+    <!--
+      ===== Testimonials (hidden until you have real quotes) =====
+      Remove the `hidden` attribute and replace the text with real client quotes.
+    -->
+    <section class="container section" id="testimonials" aria-labelledby="t-title" hidden>
+      <div class="section-head">
+        <p class="eyebrow">Kind words</p>
+        <h2 id="t-title">What clients say</h2>
+      </div>
+      <div class="grid-3">
+        <figure class="card quote">
+          <blockquote>"Quote from client one."</blockquote>
+          <figcaption><strong>Name</strong><span class="muted">Role, Company</span></figcaption>
+        </figure>
+        <figure class="card quote">
+          <blockquote>"Quote from client two."</blockquote>
+          <figcaption><strong>Name</strong><span class="muted">Role, Company</span></figcaption>
+        </figure>
+        <figure class="card quote">
+          <blockquote>"Quote from client three."</blockquote>
+          <figcaption><strong>Name</strong><span class="muted">Role, Company</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="container section" id="contact" aria-labelledby="contact-title">
+      <div class="card contact reveal">
+        <div class="contact-intro">
+          <span class="badge badge-green"><span class="pulse"></span>Available for new projects</span>
+          <h2 id="contact-title">Let's build something that matters.</h2>
+          <p>Tell me about your product, your idea, or the role you're hiring for.</p>
+          <div class="email-row">
+            <a class="email" href="mailto:adeyemidennis9@gmail.com">adeyemidennis9@gmail.com</a>
+            <button class="copy" type="button" data-copy="adeyemidennis9@gmail.com">Copy</button>
+          </div>
+          <ul class="socials">
+            <li><a href="https://x.com/dennis_intech" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/dennis-adeyemi-903a3325a" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/dukeof-tech" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.behance.net/gallery/229783331/Crost-Flow" target="_blank" rel="noopener">Behance</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <label>Name<input name="name" type="text" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label>What do you need?
+            <select name="type">
+              <option>Mobile app UI/UX design</option>
+              <option>Website or landing page</option>
+              <option>Design + front-end build</option>
+              <option>Product redesign</option>
+              <option>Full-time role</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="4" required placeholder="A few lines about your project or role…"></textarea></label>
+          <button class="btn btn-accent" type="submit">Send message</button>
+          <p class="form-note muted">Opens your email app with the message ready to send.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p class="muted">© <span id="year">2026</span> Adeyemi Dennis Adeyinka · Duke · Lagos, Nigeria</p>
+    <a class="muted" href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
