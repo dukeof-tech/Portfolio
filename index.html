@@ -300,23 +300,24 @@
       ===== Testimonials (hidden until you have real quotes) =====
       Remove the `hidden` attribute and replace the text with real client quotes.
     -->
-    <section class="container section" id="testimonials" aria-labelledby="t-title" hidden>
+    <section class="container section" id="testimonials" aria-labelledby="t-title">
       <div class="section-head">
         <p class="eyebrow">Kind words</p>
         <h2 id="t-title">What clients say</h2>
       </div>
-      <div class="grid-3">
-        <figure class="card quote">
-          <blockquote>"Quote from client one."</blockquote>
-          <figcaption><strong>Name</strong><span class="muted">Role, Company</span></figcaption>
-        </figure>
-        <figure class="card quote">
-          <blockquote>"Quote from client two."</blockquote>
-          <figcaption><strong>Name</strong><span class="muted">Role, Company</span></figcaption>
-        </figure>
-        <figure class="card quote">
-          <blockquote>"Quote from client three."</blockquote>
-          <figcaption><strong>Name</strong><span class="muted">Role, Company</span></figcaption>
+      <!-- Add more reviews by copying a <figure>; the grid adjusts on its own -->
+      <div class="quotes">
+        <figure class="card quote reveal">
+          <blockquote>
+            <p>Working with him was a smooth and rewarding experience. I needed UI/UX support for a project, and he brought a good understanding of design, attention to detail, and the ability to translate ideas into a clean, functional user experience. I'd gladly recommend him to anyone looking for a designer who takes his work seriously.</p>
+          </blockquote>
+          <figcaption>
+            <span class="quote-avatar" aria-hidden="true">JA</span>
+            <span class="quote-who">
+              <strong>John Ayomide Abe</strong>
+              <span class="muted">Backend Engineer · Co-founder &amp; CTO, Bit4orge Solutions Ltd.</span>
+            </span>
+          </figcaption>
         </figure>
       </div>
     </section>

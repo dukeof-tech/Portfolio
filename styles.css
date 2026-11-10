@@ -380,9 +380,17 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 .process li .mono { color: var(--accent); font-size: 13px; }
 
 /* ---------- Testimonials ---------- */
-.quote { margin: 0; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
-.quote blockquote { margin: 0; font-size: 16px; }
-.quote figcaption { display: flex; flex-direction: column; font-size: 14px; }
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.quote { position: relative; margin: 0; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; overflow: hidden; }
+.quote::before { content: "\201C"; position: absolute; top: 6px; right: 24px; font-size: 120px; line-height: 1; font-weight: 700; color: var(--accent); opacity: .14; pointer-events: none; }
+.quote blockquote { margin: 0; font-size: 16px; line-height: 1.6; }
+.quote blockquote p { margin: 0; }
+.quote figcaption { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+.quote-avatar { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 14px; }
+.quote-who { display: flex; flex-direction: column; }
+/* A single review gets the full width and a larger voice */
+.quote:only-child { padding: 36px; }
+.quote:only-child blockquote { font-size: clamp(18px, 2.2vw, 22px); line-height: 1.5; letter-spacing: -0.01em; max-width: 46ch; }
 
 /* ---------- Contact ---------- */
 .contact { --dark-ink: var(--contact-ink); padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 36px; background: var(--contact-bg); color: var(--contact-ink); border: 1px solid var(--line); }
