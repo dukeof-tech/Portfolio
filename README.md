@@ -2,6 +2,8 @@
 
 A fast, static portfolio: plain HTML, CSS and JavaScript. There's no build step, so it works on any free host.
 
+**Live:** https://dukedesigns.vercel.app (deploys automatically from `main` via Vercel)
+
 ```
 site/
 ├── index.html        Homepage (hero, Design ↔ Code, work, about, skills, services, contact)
