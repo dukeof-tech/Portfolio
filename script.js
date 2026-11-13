@@ -175,4 +175,84 @@
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); shuffle(); }
     });
   }
+
+  // Live project previews: each plays only while it's on screen
+  var previews = document.querySelectorAll('[data-preview]');
+  if (previews.length) {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var naira = function (n) { return '₦' + Math.round(n).toLocaleString('en-NG'); };
+    var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
+    var wait = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+    var tween = function (ms, fn) {
+      return new Promise(function (resolve) {
+        var start = null;
+        var step = function (now) {
+          if (start === null) start = now;
+          var t = Math.min((now - start) / ms, 1);
+          fn(t);
+          if (t < 1) requestAnimationFrame(step); else resolve();
+        };
+        requestAnimationFrame(step);
+      });
+    };
+
+    var players = {
+      fewsure: function (el) {
+        var amount = el.querySelector('[data-amount]');
+        var saved = el.querySelector('[data-saved]');
+        var total = 18450000;
+        return {
+          final: function () { amount.textContent = naira(total); saved.textContent = naira(total); el.classList.add('is-built'); },
+          cycle: function () {
+            el.classList.remove('is-built');
+            amount.textContent = naira(0); saved.textContent = naira(0);
+            return wait(500)
+              .then(function () { return tween(1400, function (t) { amount.textContent = naira(total * ease(t)); }); })
+              .then(function () { el.classList.add('is-built'); return tween(2300, function (t) { saved.textContent = naira(total * t); }); })
+              .then(function () { return wait(2600); });
+          }
+        };
+      },
+      village: function (el) {
+        var timer = el.querySelector('[data-timer]');
+        var state = el.querySelector('[data-state]');
+        var bar = el.querySelector('.pv-vh-bar');
+        var C = 326.7, secs = 45;
+        var show = function (t) {
+          var left = Math.ceil(secs * (1 - t));
+          timer.textContent = '00:' + (left < 10 ? '0' : '') + left;
+          bar.style.strokeDashoffset = String(C * (1 - t));
+        };
+        return {
+          final: function () { show(1); state.textContent = 'Done'; el.classList.add('is-done'); },
+          cycle: function () {
+            el.classList.remove('is-done'); state.textContent = 'Washing'; show(0);
+            return wait(500)
+              .then(function () { return tween(3200, show); })
+              .then(function () { state.textContent = 'Done'; el.classList.add('is-done'); return wait(2800); });
+          }
+        };
+      }
+    };
+
+    previews.forEach(function (el) {
+      var kind = el.getAttribute('data-preview');
+      var make = players[kind];
+      if (!make) return;
+      var p = make(el);
+      if (reduced || !('IntersectionObserver' in window)) { p.final(); return; }
+      var visible = false, running = false;
+      var loop = function () {
+        if (!visible) { running = false; return; }
+        running = true;
+        p.cycle().then(loop);
+      };
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          visible = en.isIntersecting;
+          if (visible && !running) loop();
+        });
+      }, { threshold: 0.35 }).observe(el);
+    });
+  }
 })();
